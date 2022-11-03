@@ -47,7 +47,7 @@ int max_subarray(int a[], int low, int high){
 }
 
 int main(){
-    int a[] = {1,2,3,4};
+    int a[] = {-1,-2,-3,-4};
     int x = max_subarray(a,0,3);
     cout << x << endl;
     return 0;
