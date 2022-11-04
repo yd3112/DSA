@@ -5,13 +5,11 @@ bool prime(int x)
 {
     if (x == 1)
         return false;
-    if (x == 2)
-        return true;
-    if (x == 3)
+    if (x == 2 || x == 3 || x == 5)
         return true;
 
-    if(x % 2 !=0 && x % 3 != 0){
-        for(int i = 5; i * i <= x; i = i + 6){
+    if(x % 2 !=0 && x % 3 != 0 && x % 5 != 0){
+        for(int i = 7; i * i <= x; i = i + 30){
             if(x % i == 0)
                 return false;
         }
@@ -24,7 +22,7 @@ bool prime(int x)
 
 int main()
 {
-    bool a = prime(13);
+    bool a = prime(89);
     bool b = prime(6);
     cout << a << endl << b;
     return 0;
