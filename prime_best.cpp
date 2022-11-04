@@ -5,12 +5,12 @@ bool prime(int x)
 {
     if (x == 1)
         return false;
-    if (x == 2 || x == 3 || x == 5)
+    if (x == 2 || x == 3)
         return true;
 
-    if(x % 2 !=0 && x % 3 != 0 && x % 5 != 0){
-        for(int i = 7; i * i <= x; i = i + 30){
-            if(x % i == 0)
+    if(x % 2 !=0 && x % 3 != 0){
+        for(int i = 7; i * i <= x; i = i + 6){
+            if(x % i == 0 || x % (i+2) == 0)
                 return false;
         }
         return true;
